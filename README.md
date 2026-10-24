@@ -6,6 +6,19 @@
 
 ## 安装
 
+### 使用预构建插件
+
+从 [Releases](https://github.com/belvme/zotero-connector-mcp/releases/latest) 下载 `zotero-connector-bridge-*.zip`。此包已移除本机配对配置，不能直接复用发布者的授权。
+
+1. 下载并解压同一版本的 MCP 源码，安装 Python 依赖：`python -m venv .venv`，再执行 `.venv\Scripts\python.exe -m pip install -r requirements.txt`。
+2. 将插件包解压到该 MCP 源码目录中的 `connector-ready`，确认 `manifest.json` 直接位于其中。
+3. 在 MCP 源码目录执行 `python prepare.py provision --output connector-ready`，自动生成自己的本机配对配置。
+4. 浏览器“加载解压扩展”选择 `connector-ready`，注册并启动同一源码目录的 MCP 服务，再打开 Zotero 和论文页。
+
+无需构建上游，也不需要填写令牌或保留桥接标签页。若下载了校验文件，可通过 `Get-FileHash <插件包路径> -Algorithm SHA256` 核对 `SHA256SUMS.txt`。插件请求的常规 Connector 权限及桥接新增的下载、后台连接能力仍由浏览器显示确认。
+
+### 从源码构建
+
 以下命令在本目录执行。需要 Python、Git、Node.js/npm 和支持本地解压扩展的 Chromium 116+ 浏览器。Windows 已完成实际部署验证。
 
 ```powershell

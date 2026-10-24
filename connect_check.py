@@ -20,7 +20,7 @@ async def main():
         async with ClientSession(read, write) as session:
             await session.initialize()
             print('READY: v2 MCP WebSocket background listener on 127.0.0.1:23130; automatic private pairing', flush=True)
-            print('Commands: status [URL] | save [URL] | pdf URL | download ID | auth-status | authorize | quit', flush=True)
+            print('Commands: status [URL] | save [URL] | capture JSON | pdf URL | download ID | auth-status | authorize | quit', flush=True)
             while True:
                 line = (await asyncio.to_thread(sys.stdin.readline)).strip()
                 if not line or line == 'quit':

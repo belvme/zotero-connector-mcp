@@ -10,6 +10,7 @@ outputs/
 work/
 .DS_Store
 Thumbs.db
+dist/
 
 *.pyc
 .venv/

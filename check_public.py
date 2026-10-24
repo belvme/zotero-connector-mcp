@@ -4,7 +4,7 @@ import re
 
 ROOT = Path(__file__).resolve().parent
 blocked = {'.bridge-token','mcp-private-config.json','.env'}
-ignored = {'.git','.venv','__pycache__','connector-build','connector-ready','connector-with-bridge'}
+ignored = {'.git','.venv','__pycache__','connector-build','connector-ready','connector-with-bridge','dist'}
 patterns = [r'[A-Za-z]:[/\\]Users[/\\][^/\\\s]+',
             r'gh[pousr]_[A-Za-z0-9]{20,}', r'github_pat_[A-Za-z0-9_]{20,}',
             r'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----',
