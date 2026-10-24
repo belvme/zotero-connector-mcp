@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "zotero-connector-bridge": {
+      "command": "C:/path/to/zotero-connector-mcp/.venv/Scripts/python.exe",
+      "args": [
+        "C:/path/to/zotero-connector-mcp/server.py"
+      ]
+    }
+  }
+}
